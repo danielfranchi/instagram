@@ -7,38 +7,34 @@ import { PostItem, PostsState} from '../../store/ducks/post/type'
 
 const Post = () => {
 
-  const [id, setId] = React.useState<any>(null)
-
   const dispatch = useDispatch()
-
   const posts = useSelector((state: PostsState) => state.posts.arrayPost)
-  const likes = useSelector((state: PostsState) => state.posts.likes)
-
 
   React.useEffect(() => {
     axios.get('http://localhost:4000/posts')
     .then(resposta => dispatch(getPost(resposta.data)))
   }, [])
 
-  
-  const like = (like: any) => {
-    setId(like)
-    dispatch({ type: 'GET_LIKES'})
-
-    const requisicao = {
-      likes: likes
-    }
-    axios.patch(`http://localhost:4000/posts/${id}`, requisicao)
-
-
-  }
  
+  const likes = (id: any, lik : any) => {
+
+    interface Request{
+      likes: number
+    }
+
+    const requisicao: Request = {
+       likes: Number(lik) + 1
+    }
+
+    axios.patch(`http://localhost:4000/posts/${id}`, requisicao)
+  }
+
   return (
       <>
         {posts.map((item: PostItem) =>(
-          <div className="post" key={item.id}>
+          <div className="post" key={item.id} >
             <header>
-              <img src={item.userPicture} alt="user" />
+              <img src={item.userPicture} alt="user" /> 
               <div className="post-user">
                 <strong>{item.user}</strong>
                 <span>{item.location}</span>
@@ -49,7 +45,7 @@ const Post = () => {
               <img src={item.postPicture} alt="post" />
             </div>
 
-            <div className="post-likes" onClick={() => like(item.id)}>
+            <div className="post-likes" onClick={() => likes(item.id, item.likes)}>
               <FiHeart /> {item.likes}
             </div>
             <p>{item.description}</p>

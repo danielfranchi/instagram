@@ -14,7 +14,6 @@ export interface PostItem {
 
 export interface Posts {
   arrayPost: PostItem[]
-  likes: number
 }
 
 export interface PostsState{

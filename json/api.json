@@ -6,7 +6,7 @@
       "userPicture": "https://randomuser.me/api/portraits/men/22.jpg",
       "postPicture": "https://historycouk.s3.eu-west-2.amazonaws.com/s3fs-public/styles/860x300/public/2020-07/orson-welles-war-worlds.jpg",
       "description": "On #ThisDayinHistory 1938, Orson Welles caused a nationwide panic with his broadcast of “War of the Worlds”—a realistic radio dramatization of a Martian invasion of Earth",
-      "likes": 1
+      "likes": 14
     },
     {
       "id": 3,
@@ -15,7 +15,7 @@
       "postPicture": "https://blogs.esa.int/iriss/files/2015/09/20457019454_7de78eff73_o.jpg",
       "location": "Space",
       "description": "Waving goodbye to a spacecraft.",
-      "likes": 3
+      "likes": 11
     },
     {
       "id": 4,
@@ -39,6 +39,41 @@
       "userPicture": "https://randomuser.me/api/portraits/women/21.jpg",
       "likes": 0,
       "id": 6
+    },
+    {
+      "postPicture": "https://static.whow.com.br/wp-content/uploads/2019/11/Foto-Nicolas-Lobos-Unsplash_Marte-capa.jpg",
+      "description": "Homem na lua",
+      "userPicture": "https://randomuser.me/api/portraits/women/21.jpg",
+      "likes": 0,
+      "id": 7
+    },
+    {
+      "postPicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBV2UhwNw9TO2RIX3UbCqHFlFtNIjo-SkVIw&usqp=CAU",
+      "description": "Lua !!!",
+      "userPicture": "https://randomuser.me/api/portraits/women/21.jpg",
+      "likes": 0,
+      "id": 8
+    },
+    {
+      "postPicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQwcaM_5B0xa6fSThXftffGdS9bHc03o9qYA&usqp=CAU",
+      "description": "Linda foto",
+      "userPicture": "https://randomuser.me/api/portraits/women/21.jpg",
+      "likes": 0,
+      "id": 9
+    },
+    {
+      "postPicture": "https://istoe.com.br/wp-content/uploads/sites/17/2021/01/nasa-3-418x235.jpg",
+      "description": "gollll",
+      "userPicture": "https://randomuser.me/api/portraits/women/21.jpg",
+      "likes": 0,
+      "id": 10
+    },
+    {
+      "postPicture": "",
+      "description": "",
+      "userPicture": "https://randomuser.me/api/portraits/women/21.jpg",
+      "likes": 0,
+      "id": 11
     }
   ],
   "stories": [
