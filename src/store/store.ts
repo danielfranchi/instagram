@@ -2,7 +2,6 @@ import { createStore } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { combineReducers } from 'redux'
 
-
 import reducerUser from './ducks/user/reduce'
 import reducerStories from './ducks/stories/reduce'
 import reducerPost from './ducks/post/reduce'

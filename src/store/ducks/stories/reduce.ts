@@ -10,6 +10,7 @@ function reducerStories(state = initialStateStories, action: any) {
         return {
           arrayStories: action.payload,
         }
+        
       default: 
         return state
     }

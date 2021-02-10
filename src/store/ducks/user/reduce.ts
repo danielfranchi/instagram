@@ -14,6 +14,7 @@ function reducerUser(state = initialStateUser, action: any) {
           username: action.payload.username,
           userPicture: action.payload.userPicture,
         }
+        
       default: 
         return state
     }

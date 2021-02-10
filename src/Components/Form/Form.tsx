@@ -1,12 +1,12 @@
-import React, { useRef } from 'react';
-import '../../App.css';
+import React, { useRef } from 'react'
+import '../../App.css'
 import axios from 'axios'
-import { useSelector} from 'react-redux'
-
+import { useSelector, useDispatch} from 'react-redux'
+import { newPost } from '../../store/ducks/post/action'
 
 const Form  = () => {
 
-  const like = 0
+  const dispatch = useDispatch()
   const { userPicture } = useSelector((state: any) => state.user)
 
   const inputUrl = useRef<HTMLInputElement>(null)
@@ -17,9 +17,10 @@ const Form  = () => {
       postPicture: inputUrl.current?.value,
       description: input.current?.value,
       userPicture: userPicture,
-      likes: like
+      likes: 0
     }
     axios.post("http://localhost:4000/posts", requisicao)
+      .then(resposta => dispatch(newPost(resposta.data)))
   }
 
   return (

@@ -1,6 +1,7 @@
 import React from 'react'
-import Logo from "../../images/logo-instagram.png";
-import { FiUser } from "react-icons/fi";
+import Logo from "../../images/logo-instagram.png"
+
+import { FiUser } from "react-icons/fi"
 import { useSelector} from 'react-redux'
 
 const Header = () => {

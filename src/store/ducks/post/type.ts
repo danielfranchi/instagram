@@ -1,5 +1,6 @@
 export enum TypesPost {
-  GET_POST = 'GET_POST'
+  GET_POST = 'GET_POST',
+  NEW_POST = 'NEW_POST'
 }
 
 export interface PostItem {

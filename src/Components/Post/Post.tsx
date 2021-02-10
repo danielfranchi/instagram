@@ -1,9 +1,11 @@
 import React from 'react'
-import { FiHeart } from "react-icons/fi";
 import axios from 'axios'
+
+import { FiHeart } from "react-icons/fi"
+import { getPost} from  '../../store/ducks/post/action'
 import { useDispatch, useSelector} from 'react-redux'
-import { getPost } from  '../../store/ducks/post/action'
 import { PostItem, PostsState} from '../../store/ducks/post/type'
+
 
 const Post = () => {
 
@@ -13,9 +15,8 @@ const Post = () => {
   React.useEffect(() => {
     axios.get('http://localhost:4000/posts')
     .then(resposta => dispatch(getPost(resposta.data)))
-  }, [])
+  }, [dispatch])
 
- 
   const likes = (id: any, lik : any) => {
 
     interface Request{
@@ -27,6 +28,12 @@ const Post = () => {
     }
 
     axios.patch(`http://localhost:4000/posts/${id}`, requisicao)
+    .then((response) => {
+      if (response.status === 200) {
+        axios.get('http://localhost:4000/posts')
+          .then(resposta => dispatch(getPost(resposta.data)))
+        }
+      })
   }
 
   return (
